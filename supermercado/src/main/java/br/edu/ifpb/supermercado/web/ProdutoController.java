@@ -2,12 +2,10 @@ package br.edu.ifpb.supermercado.web;
 
 import br.edu.ifpb.supermercado.domain.Produto;
 import br.edu.ifpb.supermercado.service.ProdutoService;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/produto")
