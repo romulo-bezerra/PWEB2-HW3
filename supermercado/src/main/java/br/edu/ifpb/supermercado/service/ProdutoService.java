@@ -24,15 +24,4 @@ public class ProdutoService {
         return produtoRepository.save(produto);
     }
 
-    public Optional<Produto> buscarPorId(Integer id) {
-        return produtoRepository.findById(id);
-    }
-
-    public long totalTodos() {
-        return produtoRepository.count();
-    }
-
-    public void apagarProduto(Produto produto) {
-        produtoRepository.delete(produto);
-    }
 }

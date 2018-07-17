@@ -29,17 +29,4 @@ public class ProdutoController {
         return ResponseEntity.ok().body(produtoService.salvarProduto(produto));
     }
 
-    @DeleteMapping
-    public ResponseEntity<Void> deleteProduto(@RequestParam("id") Integer id) {
-        Optional<Produto> produto = produtoService.buscarPorId(id);
-        if (produto.isPresent()) {
-            produtoService.apagarProduto(produto.get());
-            return ResponseEntity.ok().build();
-        } else {
-            HttpHeaders headers = new HttpHeaders();
-            headers.add("message", String.format("O produto de id %d não existe", id));
-            return ResponseEntity.notFound().headers(headers).build();
-        }
-    }
-
 }
